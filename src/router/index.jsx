@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
-import Login from '../pages/Login';
-import Dashboard from '../pages/Dashboard';
+import AuthPage from '../features/auth/pages/AuthPage';
+import Dashboard from '../features/dashboard/pages/Dashboard';
 import NotFound from '../pages/NotFound';
 import ProtectedRoute from './ProtectedRoute';
 import GuestOnlyRoute from './GuestOnlyRoute';
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
     path: '/login',
     element: (
       <GuestOnlyRoute>
-        <Login />
+        <AuthPage />
       </GuestOnlyRoute>
     ),
   },
